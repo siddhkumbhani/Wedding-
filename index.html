@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101014">
+<title>Ujas & Monika | Wedding Invitation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#101014;--panel:#19191f;--gold:#d8bd83;--cream:#f4eee2;--muted:#b8b1a5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--cream);font-family:'DM Sans',sans-serif;font-weight:300}a{color:inherit}
+nav{position:absolute;z-index:5;top:0;left:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:24px 5%;letter-spacing:.16em;font-size:10px;text-transform:uppercase;color:#eee}nav a{text-decoration:none;margin-left:18px}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 38%,#39302a 0%,#1a1819 35%,#101014 75%)}
+.hero:before,.hero:after{content:"";position:absolute;width:65vw;height:65vw;border:1px solid #d8bd832b;border-radius:50%;animation:rotate 36s linear infinite}.hero:after{width:82vw;height:82vw;border-style:dashed;animation-direction:reverse;animation-duration:60s}.glow{position:absolute;width:260px;height:260px;background:#d8bd8317;filter:blur(70px);border-radius:50%;animation:pulse 5s ease-in-out infinite}
+.hero-inner{position:relative;z-index:2;padding:100px 20px}.eyebrow{letter-spacing:.35em;text-transform:uppercase;font-size:10px;color:var(--gold)}
+h1{font-family:'Playfair Display',serif;font-size:clamp(48px,10vw,108px);font-weight:400;line-height:1.05;margin:24px 0 16px;letter-spacing:-.045em}.amp{font-style:italic;color:var(--gold);font-size:.78em}
+.hero-sub{letter-spacing:.25em;text-transform:uppercase;font-size:11px;color:#d7cdbb}.date-line{margin:38px auto 0;display:flex;align-items:center;justify-content:center;gap:18px;color:var(--gold);font-size:12px;letter-spacing:.22em}.date-line:before,.date-line:after{content:"";width:42px;height:1px;background:var(--gold)}
+.btn{display:inline-block;margin-top:30px;border:1px solid #d8bd8377;color:var(--cream);padding:13px 22px;background:#ffffff08;text-decoration:none;font-size:10px;letter-spacing:.2em;text-transform:uppercase;cursor:pointer;transition:.3s}.btn:hover{background:var(--gold);color:#171419}.scroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:.3em;color:#b8b1a5;text-transform:uppercase}
+section{padding:88px 0}.wrap{width:min(1050px,90%);margin:auto}.section-kicker{text-align:center;color:var(--gold);font-size:10px;letter-spacing:.32em;text-transform:uppercase}.section-title{text-align:center;font:400 clamp(34px,5vw,54px) 'Playfair Display',serif;margin:14px 0 16px}.intro{text-align:center;max-width:650px;margin:0 auto;color:var(--muted);line-height:1.9;font-size:14px}
+.countdown{display:flex;justify-content:center;gap:clamp(15px,5vw,55px);margin:42px auto 0}.timebox{text-align:center;min-width:55px}.timebox strong{display:block;font:400 clamp(30px,5vw,48px) 'Playfair Display',serif;color:var(--gold)}.timebox span{display:block;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:8px}
+.events{background:linear-gradient(180deg,#15151a,#111115)}.timeline{max-width:760px;margin:55px auto 0;position:relative}.timeline:before{content:"";position:absolute;left:22px;top:8px;bottom:8px;width:1px;background:linear-gradient(var(--gold),#d8bd8320)}
+.event{position:relative;padding:0 0 34px 68px}.event:last-child{padding-bottom:0}.dot{position:absolute;left:15px;top:5px;width:15px;height:15px;border:1px solid var(--gold);border-radius:50%;background:var(--bg);box-shadow:0 0 18px #d8bd8355}
+.event-card{border:1px solid #d8bd8325;background:linear-gradient(120deg,#ffffff08,#ffffff02);padding:22px 25px;transition:transform .3s,border-color .3s}.event-card:hover{transform:translateY(-4px);border-color:#d8bd8377}
+.event-date{color:var(--gold);font-size:10px;letter-spacing:.2em;text-transform:uppercase}.event h3{font:400 27px 'Playfair Display',serif;margin:9px 0}.event-time{color:var(--muted);font-size:12px;letter-spacing:.08em}
+.venue{text-align:center;background:radial-gradient(ellipse at center,#28231d,#101014 68%)}.venue-name{font:400 clamp(28px,5vw,44px) 'Playfair Display',serif;margin:22px 0 8px}.venue p{color:var(--muted);line-height:1.8}.maplink{color:var(--gold);text-decoration:none;border-bottom:1px solid #d8bd8377;padding-bottom:4px;font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:40px}.photo-slot{aspect-ratio:4/5;border:1px solid #d8bd8340;background:linear-gradient(145deg,#28231f,#17171c);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;cursor:pointer;text-align:center;color:var(--muted);font-size:11px;letter-spacing:.12em;text-transform:uppercase}.photo-slot img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.photo-slot span{padding:20px}.photo-slot input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%}
+footer{text-align:center;padding:55px 20px 65px;border-top:1px solid #d8bd8325;color:var(--muted);font-size:11px;letter-spacing:.12em}footer strong{display:block;color:var(--gold);font:400 30px 'Playfair Display',serif;letter-spacing:0;margin-bottom:10px}
+.music-panel{position:fixed;right:18px;bottom:18px;z-index:10;display:flex;gap:8px;align-items:center;background:#1b1a1feF;border:1px solid #d8bd8355;padding:8px 12px;backdrop-filter:blur(12px)}.music-panel button{border:0;background:none;color:var(--gold);cursor:pointer;font-size:11px;letter-spacing:.1em}.music-panel label{font-size:9px;color:var(--muted);cursor:pointer}.music-panel input{display:none}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:none}
+@keyframes rotate{to{transform:rotate(360deg)}}@keyframes pulse{50%{transform:scale(1.25);opacity:.55}}
+@media(max-width:620px){nav{padding:18px 5%;font-size:9px}nav .links{display:none}section{padding:70px 0}.gallery-grid{grid-template-columns:repeat(2,1fr)}.event{padding-left:55px}.event-card{padding:18px}.hero:before{width:95vw;height:95vw}.hero:after{width:115vw;height:115vw}}
+</style>
+</head>
+<body>
+<nav><div>U <span class="gold">&</span> M</div><div class="links"><a href="#events">Events</a><a href="#venue">Venue</a><a href="#gallery">Gallery</a></div></nav>
+<header class="hero">
+  <div class="glow"></div>
+  <div class="hero-inner">
+    <div class="eyebrow">Together with our families</div>
+    <h1>Ujas <span class="amp">&</span><br>Monika</h1>
+    <div class="hero-sub">A beautiful beginning · Wedding celebration</div>
+    <div class="date-line">29 JANUARY 2027</div>
+    <a class="btn" href="#invitation">Explore Invitation</a>
+  </div>
+  <div class="scroll">Scroll to discover ↓</div>
+</header>
+<main>
+<section id="invitation">
+ <div class="wrap reveal">
+  <div class="section-kicker">With love & blessings</div>
+  <h2 class="section-title">Two Souls, One Story.</h2>
+  <p class="intro">With the blessings of our families, we invite you to join us as we celebrate the wedding of <span class="gold">Ujas & Monika</span>. Your presence will make our celebration even more special.</p>
+  <div class="countdown" aria-label="Countdown to wedding">
+   <div class="timebox"><strong id="days">--</strong><span>Days</span></div>
+   <div class="timebox"><strong id="hours">--</strong><span>Hours</span></div>
+   <div class="timebox"><strong id="minutes">--</strong><span>Minutes</span></div>
+   <div class="timebox"><strong id="seconds">--</strong><span>Seconds</span></div>
+  </div>
+ </div>
+</section>
+<section class="events" id="events">
+ <div class="wrap reveal">
+  <div class="section-kicker">Save the dates</div><h2 class="section-title">Wedding Celebrations</h2>
+  <p class="intro">Five beautiful moments, three unforgettable days. We can't wait to celebrate with you.</p>
+  <div class="timeline">
+   <article class="event"><div class="dot"></div><div class="event-card"><div class="event-date">27 January 2027 · Day 1</div><h3>Mandap Muhurat</h3><div class="event-time">2:30 PM · Afternoon</div></div></article>
+   <article class="event"><div class="dot"></div><div class="event-card"><div class="event-date">27 January 2027 · Day 1</div><h3>Pool Party</h3><div class="event-time">5:30 PM · Evening</div></div></article>
+   <article class="event"><div class="dot"></div><div class="event-card"><div class="event-date">28 January 2027 · Day 2</div><h3>Grah Shanti</h3><div class="event-time">2:30 PM · Afternoon</div></div></article>
+   <article class="event"><div class="dot"></div><div class="event-card"><div class="event-date">28 January 2027 · Day 2</div><h3>Sangeet Night</h3><div class="event-time">8:00 PM · Night</div></div></article>
+   <article class="event"><div class="dot"></div><div class="event-card"><div class="event-date">29 January 2027 · Wedding Day</div><h3>Jaan Prasthan</h3><div class="event-time">9:00 AM · Morning</div></div></article>
+   <article class="event"><div class="dot"></div><div class="event-card"><div class="event-date">29 January 2027 · Wedding Day</div><h3>Wedding Muhurat</h3><div class="event-time">12:00 PM · Noon</div></div></article>
+  </div>
+ </div>
+</section>
+<section class="venue" id="venue">
+ <div class="wrap reveal">
+  <div class="section-kicker">The celebration awaits</div><h2 class="section-title">The Venue</h2>
+  <div class="venue-name">FNG Resort</div>
+  <p>Kumbhaji ni Derdi, Gujarat</p>
+  <a class="maplink" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=FNG+Resort+Kumbhaji+ni+Derdi+Gujarat">Open location in Google Maps ↗</a>
+  <p style="font-size:11px;margin-top:22px">All wedding functions will be celebrated at this venue.</p>
+ </div>
+</section>
+<section id="gallery">
+ <div class="wrap reveal">
+  <div class="section-kicker">A glimpse of us</div><h2 class="section-title">Our Moments</h2>
+  <p class="intro">Photo memories will be added here. Tap any frame to choose a photo from your device.</p>
+  <div class="gallery-grid">
+   <label class="photo-slot"><span>01 · Couple Portrait<br><small>Tap to add photo</small></span><input type="file" accept="image/*" aria-label="Add couple portrait"></label>
+   <label class="photo-slot"><span>02 · Together<br><small>Tap to add photo</small></span><input type="file" accept="image/*" aria-label="Add together photo"></label>
+   <label class="photo-slot"><span>03 · Traditional Look<br><small>Tap to add photo</small></span><input type="file" accept="image/*" aria-label="Add traditional photo"></label>
+   <label class="photo-slot"><span>04 · Candid Moment<br><small>Tap to add photo</small></span><input type="file" accept="image/*" aria-label="Add candid photo"></label>
+   <label class="photo-slot"><span>05 · A Favourite Memory<br><small>Tap to add photo</small></span><input type="file" accept="image/*" aria-label="Add favourite memory"></label>
+  </div>
+ </div>
+</section>
+</main>
+<footer><strong class="serif">Ujas & Monika</strong>29 · 01 · 2027<br><br>Made with love · We look forward to celebrating with you</footer>
+<div class="music-panel"><button id="musicBtn" type="button">♫ Add music</button><label for="musicFile">Choose audio</label><input id="musicFile" type="file" accept="audio/*"><audio id="audio" loop></audio></div>
+<script>
+const target=new Date('2027-01-29T12:00:00+05:30').getTime();
+function tick(){let d=Math.max(0,target-Date.now());document.getElementById('days').textContent=Math.floor(d/86400000);document.getElementById('hours').textContent=Math.floor(d%86400000/3600000);document.getElementById('minutes').textContent=Math.floor(d%3600000/60000);document.getElementById('seconds').textContent=Math.floor(d%60000/1000)}
+tick();setInterval(tick,1000);
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+document.querySelectorAll('.photo-slot input').forEach(input=>input.addEventListener('change',e=>{const file=e.target.files[0];if(!file)return;const label=e.target.closest('.photo-slot');let img=label.querySelector('img');if(!img){img=document.createElement('img');label.appendChild(img)}img.src=URL.createObjectURL(file);label.querySelector('span').style.display='none'}));
+const audio=document.getElementById('audio'),musicBtn=document.getElementById('musicBtn'),musicFile=document.getElementById('musicFile');
+musicFile.addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;audio.src=URL.createObjectURL(f);audio.play().then(()=>musicBtn.textContent='♫ Music on').catch(()=>musicBtn.textContent='♫ Tap to play')});
+musicBtn.addEventListener('click',()=>{if(!audio.src){musicFile.click();return}if(audio.paused){audio.play();musicBtn.textContent='♫ Music on'}else{audio.pause();musicBtn.textContent='♫ Music off'}});
+</script>
+</body>
+</html>
